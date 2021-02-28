@@ -15,3 +15,4 @@ Otherwise, you will run the small datasets, there you can choose one of the foll
  This feature represents the number of first and second neighbors belonging to each class in the training set. For example, assume a classification task with 3 possible labels, and a node with 5 neighbors and 30 second neighbors. Further assume that 1 first neighbor belongs to the training set and has label A, 3 second neighbors belong to the training set and have label A and 1 second neighbor belongs to the training
 set and has label B. The input to the node would be [1,0,0,3,1,0],
 where the first three values represent the first neighbors and the last three values represent the second neighbors.
+Code for creating this feature can be found in pre-precess.py file.
