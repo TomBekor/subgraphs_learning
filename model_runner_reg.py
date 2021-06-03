@@ -559,7 +559,7 @@ def main_gcn(graph,data, X, GS, BOW, labels,in_features, hid_features, out_featu
             nodes = np.array(list(range(len(labels))))
             np.random.shuffle(nodes)
             print(len(nodes))
-            with open('DATA_saint/{}/role.json'.format(ds_name)) as json_file:
+            with open('DataSets/{}/role.json'.format(ds_name)) as json_file:
                 data = json.load(json_file)
             tr_inds = data['tr']
             te_indes = data['te']
