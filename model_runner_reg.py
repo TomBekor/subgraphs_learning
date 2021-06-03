@@ -468,6 +468,7 @@ def execute_runner(runners, plots_data, is_nni=False):
     print(type(lst))
     print(type(lst[0]))
     print(type(lst[0][0]))
+    print(type(lst[0][0].cpu()))
     train_loss_mean = np.mean(lst, axis=0)
     # # TODO
     # # train_loss_mean = np.mean([[results[j][4][i] for i in range(len(results[j][4]))] for j in range(size)], axis=0)
