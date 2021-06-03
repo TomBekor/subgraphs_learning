@@ -106,13 +106,13 @@ class GCN_subgraphs:
         return g
 
     def load_m(self, normalize=True):
-        adj_full = scipy.sparse.load_npz('DATA_saint/{}/adj_full.npz'.format(dataSetName)).astype(np.bool)
-        adj_train = scipy.sparse.load_npz('DATA_saint/{}/adj_train.npz'.format(dataSetName)).astype(np.bool)
+        adj_full = scipy.sparse.load_npz('DataSets/{}/adj_full.npz'.format(dataSetName)).astype(np.bool)
+        adj_train = scipy.sparse.load_npz('DataSets/{}/adj_train.npz'.format(dataSetName)).astype(np.bool)
         t = time.time()
-        role = json.load(open('DATA_saint/{}/role.json'.format(dataSetName)))
+        role = json.load(open('DataSets/{}/role.json'.format(dataSetName)))
         print("took", time.time() - t)
-        feats = np.load('DATA_saint/{}/feats.npy'.format(dataSetName))
-        class_map = json.load(open('DATA_saint/{}/class_map.json'.format(dataSetName)))
+        feats = np.load('DataSets/{}/feats.npy'.format(dataSetName))
+        class_map = json.load(open('DataSets/{}/class_map.json'.format(dataSetName)))
         class_map = {int(k): v for k, v in class_map.items()}
         assert len(class_map) == feats.shape[0]
         # ---- normalize feats ----
