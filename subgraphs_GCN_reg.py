@@ -224,9 +224,9 @@ if __name__ == "__main__":
     else:
         BOW = False  # change to true if GraphSaint is False and also if you want to use the bag of words input (and not the 2k vectors).
         # choose dataset: relevant when running on the small graphs only (and not on graphsaint):
-        dataSetName = "cora";
-        num_classes = 7;
-        avarage_deg = 3.8980797636632203;
+        dataSetName = "cora"
+        num_classes = 7
+        avarage_deg = 3.8980797636632203
         directed = True
         # dataSetName = "CiteSeer"; num_classes = 6; avarage_deg  = 2.7363991584009617; directed=True
         # dataSetName = "PubMed"; num_classes = 3; avarage_deg  = 4.496018664096972; directed=False
