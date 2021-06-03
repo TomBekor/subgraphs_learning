@@ -152,10 +152,20 @@ class GCN_subgraphs:
             except:
                 data = None
 
+            # TODO
+            # _ = main_gcn(graph=self._g, X=self._X, data=data,
+            #              labels=self._labels, in_features=self.in_features,
+            #              hid_features=25, out_features=self._num_classes, ds_name=dataSetName,
+            #              epochs=100, dropout=0.2923933209489382, lr=0.00448457, l2_pen=0.0029646435597208516,
+            #              beta=beta, gamma=gamma, GS=GS, BOW=BOW,
+            #              trials=1, dumping_name='',
+            #              optimizer=Adam,
+            #              is_nni=self._nni)
+
             _ = main_gcn(graph=self._g, X=self._X, data=data,
                          labels=self._labels, in_features=self.in_features,
                          hid_features=25, out_features=self._num_classes, ds_name=dataSetName,
-                         epochs=100, dropout=0.2923933209489382, lr=0.00448457, l2_pen=0.0029646435597208516,
+                         epochs=1, dropout=0.2923933209489382, lr=0.00448457, l2_pen=0.0029646435597208516,
                          beta=beta, gamma=gamma, GS=GS, BOW=BOW,
                          trials=1, dumping_name='',
                          optimizer=Adam,

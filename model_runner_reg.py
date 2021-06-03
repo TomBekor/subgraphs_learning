@@ -464,7 +464,13 @@ def execute_runner(runners, plots_data, is_nni=False):
     # for printing results on graphs. for other uses - the last result is the one should be used.
     size = len(results)
     #train_loss_mean = torch.stack([torch.tensor([results[j][4][i] for i in range(len(results[j][4]))]) for j in range(size)]).mean(axis=0)
-    train_loss_mean = np.mean([ [results[j][4][i] for i in range(len(results[j][4]))] for j in range(size) ], axis=0)
+    lst = [[results[j][4][i] for i in range(len(results[j][4]))] for j in range(size)]
+    print(type(lst))
+    print(type(lst[0]))
+    print(type(lst[0]))
+    train_loss_mean = np.mean(lst, axis=0)
+    # # TODO
+    # # train_loss_mean = np.mean([[results[j][4][i] for i in range(len(results[j][4]))] for j in range(size)], axis=0)
     #train_acc_mean = torch.stack([ torch.tensor([results[j][5][i] for i in range(len(results[j][5]))]) for j in range(size) ]).mean(axis=0)
     train_acc_mean = np.mean([ [results[j][5][i] for i in range(len(results[j][5]))] for j in range(size) ], axis=0)
     train_cn_acc_mean = np.mean([[results[j][6][i] for i in range(len(results[j][6]))] for j in range(size)], axis=0)
